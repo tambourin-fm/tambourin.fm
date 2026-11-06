@@ -85,7 +85,10 @@ p { margin: 0; max-width: 65ch; }
 
 /* front page: the hero alone, in the middle of the screen */
 body.play .page { align-content: center; justify-items: center; }
-body.play .foot-links { justify-content: center; }
+/* links in the bottom-right corner, mirroring the theme dot at the top right */
+body.play .site-foot { padding-block: var(--unit); }
+body.play .site-foot .inner { max-width: none; }
+body.play .foot-links { justify-content: flex-end; }
 .hero { display: grid; justify-items: center; }
 .hero-mark { width: min(360px, 80vw); height: auto; color: var(--ink); }
 .links { display: flex; flex-wrap: wrap; gap: var(--unit); list-style: none; padding: 0; margin: 0; }
