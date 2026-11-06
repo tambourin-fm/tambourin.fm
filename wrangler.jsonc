@@ -1,0 +1,12 @@
+// Cloudflare Worker for tambourin.fm. For now it only serves the static site
+// in public/. Later the same Worker answers /account and /api (member
+// accounts, certificates, user libraries); see notes/launch.md in the
+// tambourin repo.
+{
+  "name": "tambourin-fm",
+  "compatibility_date": "2026-11-01",
+  "assets": {
+    "directory": "./public",
+    "not_found_handling": "404-page"
+  }
+}
