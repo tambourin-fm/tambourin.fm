@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+<title>Tambourin</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/ibm-plex-mono-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
+<script>
+  // set the theme before first paint (assets/site.js handles the toggle)
+  try { const t = localStorage.getItem("tambourin.theme"); if (t) document.documentElement.dataset.theme = t; } catch {}
+</script>
+<script type="module" src="/assets/site.js"></script>
+</head>
+<!-- plain paper: the front page is where Tambourin is played -->
+<body class="play">
+<main class="page">
+  <section class="hero">
+    <svg class="hero-mark" viewBox="0 0 360 400" width="360" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Tambourin">
+      <defs>
+        <clipPath id="hero-line"><rect x="0" y="38.75" width="360" height="82.5"/><rect x="0" y="158.75" width="360" height="82.5"/><rect x="0" y="278.75" width="360" height="82.5"/></clipPath>
+        <mask id="hero-ports"><rect width="360" height="400" fill="white"/><rect x="136.5" y="156.5" width="7" height="7" fill="black"/><rect x="216.5" y="156.5" width="7" height="7" fill="black"/><rect x="216.5" y="236.5" width="7" height="7" fill="black"/><rect x="136.5" y="236.5" width="7" height="7" fill="black"/></mask>
+      </defs>
+      <g fill="none" stroke="currentColor" stroke-linecap="square" stroke-linejoin="miter" stroke-miterlimit="10">
+        <polyline points="20,40 100,40" stroke-width="2.5"/>
+        <polyline points="60,40 60,120" stroke-width="2.5"/>
+        <polyline points="138.88,122.24 180,40 221.12,122.24" stroke-width="2.5" clip-path="url(#hero-line)"/>
+        <polyline points="260,120 260,40 340,40 340,120" stroke-width="2.5"/>
+        <polyline points="300,40 300,80" stroke-width="2.5"/>
+        <polyline points="20,160 20,240 100,240 100,200 20,200" stroke-width="2.5"/>
+        <polygon points="180,143.43 236.57,200 180,256.57 123.43,200" stroke-width="1"/>
+        <rect x="140" y="160" width="80" height="80" stroke-width="2.5" mask="url(#hero-ports)"/>
+        <rect x="136.5" y="156.5" width="7" height="7" stroke-width="1"/>
+        <rect x="216.5" y="156.5" width="7" height="7" stroke-width="1"/>
+        <rect x="216.5" y="236.5" width="7" height="7" stroke-width="1"/>
+        <rect x="136.5" y="236.5" width="7" height="7" stroke-width="1"/>
+        <polyline points="260,160 260,240 340,240 340,160" stroke-width="2.5"/>
+        <polyline points="20,320 100,320 100,280 20,280 20,360" stroke-width="2.5"/>
+        <polyline points="60,320 101.77,361.77" stroke-width="2.5" clip-path="url(#hero-line)"/>
+        <polyline points="180,280 180,360" stroke-width="2.5"/>
+        <polyline points="340,280 340,360 260,280 260,360" stroke-width="2.5"/>
+      </g>
+    </svg>
+    <p class="slot">one line under the hero: what Tambourin is (the README's subtitle, or the tagline draft in notes/identity.md)</p>
+  </section>
+
+  <section>
+    <p class="slot">two to four sentences: what it does, who it's for. The README's "What it is" bullets are the raw material.</p>
+  </section>
+
+  <nav aria-label="Main">
+    <ul class="links">
+      <li><a href="/docs/">docs</a></li>
+      <li><a href="https://github.com/tambourin-fm/tambourin">source</a></li>
+    </ul>
+  </nav>
+
+  <section>
+    <p class="slot">attribution: Thomas Capogreco, with a mention of performing as assembly</p>
+  </section>
+</main>
+<footer class="site-foot">
+  <div class="inner">
+    <svg class="lockup" viewBox="0 0 400 40" width="400" height="40" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="tambourin.fm">
+      <line class="lockup-cable" x1="24" y1="20" x2="376" y2="20" stroke-width="2.5"/>
+      <rect x="16" y="16" width="8" height="8" fill="none" stroke="currentColor" stroke-width="1"/>
+      <rect class="lockup-inlet" x="376" y="16" width="8" height="8" fill="currentColor" stroke="currentColor" stroke-width="1"/>
+      <text x="25" y="35" font-size="16">tambourin.fm</text>
+    </svg>
+    <nav class="foot-links" aria-label="Footer">
+      <a href="https://github.com/tambourin-fm">github</a>
+      <a href="https://www.gnu.org/licenses/agpl-3.0.html">AGPL-3.0</a>
+    </nav>
+  </div>
+</footer>
+<button class="theme-dot" type="button" aria-label="Switch light or dark (t)" title="light / dark (t)"></button>
+</body>
+</html>
